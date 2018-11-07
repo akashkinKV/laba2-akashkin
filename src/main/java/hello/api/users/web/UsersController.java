@@ -1,6 +1,8 @@
 package hello.api.users.web;
 
 import hello.api.users.model.UserInfo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,134 +17,102 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api-users")
 public class UsersController {
-
+    private static final Logger logger = LoggerFactory.getLogger(UsersController.class);
     @Autowired
     private UserService userService;
 
-    @GetMapping("/login{email}{password}")
-    public ResponseEntity<String> loginUserbyEmail (@RequestParam String email,@RequestParam String password) {
+
+    @GetMapping("/get{uuid}")
+    public ResponseEntity<UserInfo> getUser(@RequestParam UUID uuid) {
         try {
 
 
-    return new ResponseEntity(userService.loginUser(email,password), HttpStatus.OK);
-
-        }catch (Exception e)
-        {
+            return new ResponseEntity(userService.findUserByUid(uuid), HttpStatus.OK);
+        } catch (Exception e) {
+            logger.error("getError", e);
             return new ResponseEntity(HttpStatus.NO_CONTENT);
         }
     }
 
-    @GetMapping("/findByEmail{email}")
-    public ResponseEntity<UserInfo> findUserByEmail(@RequestParam String email) {
+    @PostMapping("/create")
+    public ResponseEntity createUser(@RequestBody UserInfo requestUserDetails) {
         try {
 
 
-            return new ResponseEntity( userService.findUserByEmail(email),HttpStatus.OK);
+            userService.registrationUser(requestUserDetails);
 
-        }catch (Exception e)
-        {
+            return new ResponseEntity(HttpStatus.CREATED);
+        } catch (Exception e) {
+            logger.error("createError", e);
             return new ResponseEntity(HttpStatus.NO_CONTENT);
         }
     }
 
+    @DeleteMapping("/delete{uuid}")
+    public ResponseEntity deleteUser(@RequestParam UUID uuid) {
 
-    @GetMapping("/findByUID{uuid}")
-    public ResponseEntity<UserInfo> findUserByUID (@RequestParam UUID uuid) {
         try {
 
-
-            return new ResponseEntity( userService.findUserByUid(uuid),HttpStatus.OK);
-        }catch (Exception e)
-        {
-            return new ResponseEntity(HttpStatus.NO_CONTENT);
-        }
-    }
-
-    @GetMapping("/registration{email}{password}")
-    public ResponseEntity<String> registrationUser ( @RequestParam String email,@RequestParam String password) {
-        try {
-
-
-            userService.registrationUser(email,password);
-
-            return new ResponseEntity("Success",HttpStatus.OK);
-        }catch (Exception e)
-        {
-            return new ResponseEntity(HttpStatus.NO_CONTENT);
-        }
-    }
-
-    @GetMapping("/updateVK{vk}{uuid}")
-    public ResponseEntity<String> updateVK ( @RequestParam String vk,@RequestParam UUID uuid) {
-        try {
-
-
-            userService.updateUserVk(vk, uuid);
-
-            return new ResponseEntity("Success",HttpStatus.OK);
-        }catch (Exception e)
-        {
-            return new ResponseEntity(HttpStatus.NO_CONTENT);
-        }
-    }
-    @GetMapping("/updateIdentify{identify}{uuid}")
-    public ResponseEntity<String> updateIdentify ( @RequestParam boolean identify,@RequestParam UUID uuid) {
-        try {
-
-
-            userService.updateUserIdentify(identify, uuid);
-
-            return new ResponseEntity("Success",HttpStatus.OK);
-        }catch (Exception e)
-        {
-            return new ResponseEntity(HttpStatus.NO_CONTENT);
-        }
-    }
-
-    @GetMapping("/updatePassword{password}{uuid}")
-    public ResponseEntity<String> updateIdentify ( @RequestParam String password,@RequestParam UUID uuid) {
-        try {
-
-
-            userService.updateUserPassword(password, uuid);
-
-            return new ResponseEntity("Success",HttpStatus.OK);
-        }catch (Exception e)
-        {
-            return new ResponseEntity(HttpStatus.NO_CONTENT);
-        }
-    }
-
-    @GetMapping("/getAllUsers")
-    public ResponseEntity<List<UserInfo>> findAllUsers() {
-
-        List<UserInfo> users = userService.findAllUsers();
-
-        if (users.isEmpty()) {
-            return new ResponseEntity(HttpStatus.NO_CONTENT);
-            // You many decide to return HttpStatus.NOT_FOUND
-        }
-        else {
-            return new ResponseEntity<List<UserInfo>>(users, HttpStatus.OK);
-        }
-
-    }
-
-    @GetMapping()
-    public ResponseEntity<String> getApi () {
-
-        return new ResponseEntity("Hello this is API-USERS",HttpStatus.OK);
-    }
-    @GetMapping("/delete{uuid}")
-    public ResponseEntity<String> deleteUser (@RequestParam UUID  uuid) {
-        try {
 
             userService.deleteUser(uuid);
-            return new ResponseEntity( "Success",HttpStatus.OK);
-        }catch (Exception e)
-        {
+
+            return new ResponseEntity(HttpStatus.OK);
+        } catch (Exception e) {
+            logger.error("deleteError", e);
             return new ResponseEntity(HttpStatus.NO_CONTENT);
         }
+    }
+
+    @PutMapping("/update")
+    public ResponseEntity updateUser(@RequestBody UserInfo requestUserDetails) {
+        try {
+
+
+            userService.updateUser(requestUserDetails);
+
+            return new ResponseEntity(HttpStatus.OK);
+        } catch (Exception e) {
+            logger.error("updateUserError", e);
+            return new ResponseEntity(HttpStatus.NO_CONTENT);
+        }
+    }
+
+
+    @PostMapping("/login")
+    public ResponseEntity loginUser(@RequestBody UserInfo requestUserDetails) {
+        try {
+
+            if (userService.loginUser(requestUserDetails).equals("Success")) {
+                return new ResponseEntity(HttpStatus.OK);
+            } else {
+                return new ResponseEntity(HttpStatus.LOCKED);
+            }
+
+        } catch (Exception e) {
+            logger.error("loginError", e);
+            return new ResponseEntity(HttpStatus.NO_CONTENT);
+        }
+    }
+
+
+    @GetMapping("/getAll")
+    public ResponseEntity<List<UserInfo>> findAllUsers() {
+        try {
+
+
+            List<UserInfo> users = userService.findAllUsers();
+
+            if (users.isEmpty()) {
+                return new ResponseEntity(HttpStatus.NOT_FOUND);
+
+            } else {
+                return new ResponseEntity<List<UserInfo>>(users, HttpStatus.OK);
+            }
+        } catch (Exception e) {
+            logger.error("getAllError", e);
+            return new ResponseEntity(HttpStatus.NO_CONTENT);
+        }
+
     }
 
 

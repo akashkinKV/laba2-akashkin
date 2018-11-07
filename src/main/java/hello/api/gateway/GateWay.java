@@ -23,26 +23,24 @@ import java.util.UUID;
 public class GateWay {
 
 
+    static final String URL_API_USERS="http://localhost:8080/api-users/";
+    static final String URL_API_STATISTIC="http://localhost:8080/api-statistic/";
+    static final String URL_API_STATISTIC_ONLINE= "http://localhost:8080/api-statisticOnline/";
 
-
-    static final String URL_API_USERS_LOGIN = "http://localhost:8080/api-users/login";
-    static final String URL_API_USERS_REGISTR = "http://localhost:8080/api-users/registration";
-    static final String URL_API_USERS_UPDATEVK = "http://localhost:8080/api-users/updateVK";
-    static final String URL_API_USERS_ALL = "http://localhost:8080/api-users/getAllUsers";
-    static final String URL_API_USER_BY_UUID = "http://localhost:8080/api-users/findByUID";
+    static final String URL_API_USERS_LOGIN = URL_API_USERS.concat("login");
+    static final String URL_API_USERS_REGISTR = URL_API_USERS.concat("create");
+    static final String URL_API_USERS_UPDATEVK = URL_API_USERS.concat("update");
+    static final String URL_API_USERS_ALL = URL_API_USERS.concat("getAllUsers");
+    static final String URL_API_USER_BY_UUID = URL_API_USERS.concat("findByUID");
    
-    static final String URL_API_STATISTIC_CREATE_STAT = "http://localhost:8080/api-statistic/create";
-    static final String URL_API_STATISTIC_REFRESH_STAT = "http://localhost:8080/api-statistic/refresh";
-    static final String URL_API_STATISTIC_FIND_ALL_STATS = "http://localhost:8080/api-statistic//getAllStatsByUID";
-    static final String URL_API_STATISTIC_FIND_WEEK_STATS = "http://localhost:8080/api-statistic//getWeekStatsByUID";
-    static final String URL_API_STATISTIC_FIND_MONTH_STATS = "http://localhost:8080/api-statistic//getMonthStatsByUID";
+    static final String URL_API_STATISTIC_CREATE_STAT = URL_API_STATISTIC.concat("create");
+    static final String URL_API_STATISTIC_REFRESH_STAT = URL_API_STATISTIC.concat("refresh");
+    static final String URL_API_STATISTIC_FIND_ALL_STATS = URL_API_STATISTIC.concat("getAllStatsByUID");
+    static final String URL_API_STATISTIC_FIND_WEEK_STATS = URL_API_STATISTIC.concat("getWeekStatsByUID");
+    static final String URL_API_STATISTIC_FIND_MONTH_STATS = URL_API_STATISTIC.concat("getMonthStatsByUID");
 
 
-
-    @Autowired
-    private UserService userService;
-
-
+//USER API
     @GetMapping("/registration{email}{password}")
     public ResponseEntity<String> registrationUser(@RequestParam String email,@RequestParam String password) {
         try {
@@ -74,6 +72,8 @@ public class GateWay {
             return new ResponseEntity(HttpStatus.NO_CONTENT);
         }
     }
+
+//Statistic API
 
     @GetMapping("/refreshStat{uuid}")
     public ResponseEntity<StatisticInfo> refreshStat (@RequestParam UUID uuid) {
@@ -164,6 +164,7 @@ public class GateWay {
             return new ResponseEntity(HttpStatus.NO_CONTENT);
         }
     }
+
     public void createStatOneday ( String vk, String uuid) {
         try {
             UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(URL_API_STATISTIC_CREATE_STAT)

@@ -30,17 +30,17 @@ public class Application {
     public class ScheduledTasks {
 
 
-        @Scheduled(cron = "*/600 * * * * *")
-        public void reportCurrentTime() {
-            List<UserInfo> allUsers=gateWay.findAllUsers();
-            System.out.println("lox");
-
-            for (int i = 0; i < allUsers.size(); i++) {
-
-                if(!allUsers.get(i).getVk().equals("No"))
-                gateWay.createStatOneday(allUsers.get(i).getVk(),allUsers.get(i).getUid().toString());
-            }
-            System.out.println("lox");
-        }
+//        @Scheduled(cron = "*/120 * * * * *")
+//        public void reportCurrentTime() {
+//            List<UserInfo> allUsers=gateWay.findAllUsers();
+//
+//
+//            for (int i = 0; i < allUsers.size(); i++) {
+//
+//                if(!allUsers.get(i).getVk().equals("No"))
+//                gateWay.createStatOneday(allUsers.get(i).getVk(),allUsers.get(i).getUid().toString());
+//            }
+//
+//        }
     }
 }

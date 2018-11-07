@@ -21,22 +21,21 @@ public class StatisticController {
     private StatisticService statRepos;
 
 
-
-    @GetMapping("/getAllStatsByUID{uuid}")
-    public ResponseEntity<List<StatisticInfo>> findAllStatsByUUID( @RequestParam String uuid) {
+    @GetMapping("/getAll{uuid}")
+    public ResponseEntity<List<StatisticInfo>> findAllStatsByUUID(@RequestParam String uuid) {
 
         List<StatisticInfo> stats = statRepos.findAllStatsByUUID(uuid);
 
         if (stats.isEmpty()) {
             return new ResponseEntity(HttpStatus.NO_CONTENT);
             // You many decide to return HttpStatus.NOT_FOUND
-        }
-        else {
+        } else {
             return new ResponseEntity<List<StatisticInfo>>(stats, HttpStatus.OK);
         }
 
     }
-    @GetMapping("/getWeekStatsByUID{uuid}")
+
+    @GetMapping("/getWeek{uuid}")
     public ResponseEntity<List<StatisticInfo>> findWeekStatsByUUID(@RequestParam String uuid) {
 
         List<StatisticInfo> stats = statRepos.findWeekStatsByUUID(uuid);
@@ -44,55 +43,47 @@ public class StatisticController {
         if (stats.isEmpty()) {
             return new ResponseEntity(HttpStatus.NO_CONTENT);
             // You many decide to return HttpStatus.NOT_FOUND
-        }
-        else {
+        } else {
             return new ResponseEntity<List<StatisticInfo>>(stats, HttpStatus.OK);
         }
 
     }
-    @GetMapping("/getMonthStatsByUID{uuid}")
-    public ResponseEntity<List<StatisticInfo>> findMonthStatsByUUID( @RequestParam String uuid) {
+
+    @GetMapping("/getMonth{uuid}")
+    public ResponseEntity<List<StatisticInfo>> findMonthStatsByUUID(@RequestParam String uuid) {
 
         List<StatisticInfo> stats = statRepos.findMonthStatsByUUID(uuid);
 
         if (stats.isEmpty()) {
             return new ResponseEntity(HttpStatus.NO_CONTENT);
             // You many decide to return HttpStatus.NOT_FOUND
-        }
-        else {
+        } else {
             return new ResponseEntity<List<StatisticInfo>>(stats, HttpStatus.OK);
         }
 
     }
+
     @GetMapping("/create{vk}{uuid}")
-    public ResponseEntity<String> createStat (@RequestParam String vk, @RequestParam String uuid) {
+    public ResponseEntity<String> createStat(@RequestParam String vk, @RequestParam String uuid) {
         try {
-            statRepos.createStatistic(uuid,vk);
-            return new ResponseEntity( "Succsec",HttpStatus.OK);
-        }catch (Exception e)
-        {
-            return new ResponseEntity("Error",HttpStatus.NO_CONTENT);
+            statRepos.createStatistic(uuid, vk);
+            return new ResponseEntity("Succsec", HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity("Error", HttpStatus.NO_CONTENT);
         }
     }
+
     @GetMapping("/refresh{vk}{uuid}")
-    public ResponseEntity<StatisticInfo> refreshStat (@RequestParam String vk, @RequestParam String uuid) {
+    public ResponseEntity<StatisticInfo> refreshStat(@RequestParam String vk, @RequestParam String uuid) {
         try {
 
-            return new ResponseEntity(  statRepos.refreshStatistic(uuid,vk),HttpStatus.OK);
-        }catch (Exception e)
-        {
+            return new ResponseEntity(statRepos.refreshStatistic(uuid, vk), HttpStatus.OK);
+        } catch (Exception e) {
             return new ResponseEntity(HttpStatus.NO_CONTENT);
         }
     }
-   
 
 
-    @GetMapping()
-    public ResponseEntity<String> getApi () {
-
-        return new ResponseEntity("Hello this is API-STATISTIC",HttpStatus.OK);
-    }
-   
 
 
 }

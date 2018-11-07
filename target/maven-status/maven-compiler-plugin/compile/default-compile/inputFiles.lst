@@ -4,11 +4,11 @@ C:\git\14\src\main\java\hello\api\statistic\model\StatisticInfo.java
 C:\git\14\src\main\java\hello\api\users\service\UserService.java
 C:\git\14\src\main\java\hello\api\statistic\entity\Statistic.java
 C:\git\14\src\main\java\hello\api\statistic\service\StatisticService.java
+C:\git\14\src\main\java\hello\api\gateway\GateWay.java
 C:\git\14\src\main\java\hello\api\users\service\UserServiceImpl.java
 C:\git\14\src\main\java\hello\api\users\web\UsersController.java
 C:\git\14\src\main\java\hello\api\users\entity\User.java
 C:\git\14\src\main\java\hello\api\users\repository\UserRepos.java
-C:\git\14\src\main\java\hello\getway\GateWay.java
 C:\git\14\src\main\java\hello\api\statistic\web\StatisticController.java
 C:\git\14\src\main\java\hello\Application.java
 C:\git\14\src\main\java\hello\api\statistic\service\StatisticServiceImpl.java
