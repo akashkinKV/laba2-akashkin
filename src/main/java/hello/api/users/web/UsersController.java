@@ -39,12 +39,16 @@ public class UsersController {
         try {
 
 
-            userService.registrationUser(requestUserDetails);
+            boolean metkaVK = userService.registrationUser(requestUserDetails);
+            if (metkaVK == true) {
+                return new ResponseEntity(HttpStatus.CREATED);
+            } else {
+                return new ResponseEntity(HttpStatus.NOT_FOUND);
+            }
 
-            return new ResponseEntity(HttpStatus.CREATED);
         } catch (Exception e) {
             logger.error("createError", e);
-            return new ResponseEntity(HttpStatus.NO_CONTENT);
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
@@ -59,7 +63,7 @@ public class UsersController {
             return new ResponseEntity(HttpStatus.OK);
         } catch (Exception e) {
             logger.error("deleteError", e);
-            return new ResponseEntity(HttpStatus.NO_CONTENT);
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
@@ -73,7 +77,7 @@ public class UsersController {
             return new ResponseEntity(HttpStatus.OK);
         } catch (Exception e) {
             logger.error("updateUserError", e);
-            return new ResponseEntity(HttpStatus.NO_CONTENT);
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
@@ -90,7 +94,7 @@ public class UsersController {
 
         } catch (Exception e) {
             logger.error("loginError", e);
-            return new ResponseEntity(HttpStatus.NO_CONTENT);
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
@@ -110,7 +114,7 @@ public class UsersController {
             }
         } catch (Exception e) {
             logger.error("getAllError", e);
-            return new ResponseEntity(HttpStatus.NO_CONTENT);
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
     }

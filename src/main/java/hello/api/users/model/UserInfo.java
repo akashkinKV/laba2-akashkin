@@ -12,6 +12,7 @@ public class UserInfo {
     public String getVk() {
         return vk;
     }
+
     public String getEmail() {
         return email;
     }
@@ -19,6 +20,7 @@ public class UserInfo {
     public String getPassword() {
         return password;
     }
+
     public boolean getIdentify() {
         return identify;
     }

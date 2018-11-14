@@ -13,7 +13,6 @@ public interface UserRepos
         extends JpaRepository<User, Integer> {
 
 
-
     User findUsersByUid(UUID uuid);
 
     User findUsersByEmail(String email);

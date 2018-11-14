@@ -10,26 +10,21 @@ import java.util.UUID;
 public interface StatisticService {
 
 
+    @Nullable
+    void createStatistic(@Nonnull UUID uuid, @Nonnull String vk);
 
 
+    List<StatisticInfo> findWeekStatsByUUID(@Nonnull UUID uuid);
 
+    List<StatisticInfo> findMonthStatsByUUID(@Nonnull UUID uuid);
 
+    List<StatisticInfo> findAllStatsByUUID(@Nonnull UUID uuid);
 
-
+    StatisticInfo refreshStatistic(@Nonnull UUID uuid, @Nonnull String vk);
 
 
     @Nullable
-    void createStatistic(@Nonnull String uuid,@Nonnull String vk);
-
-
-    List<StatisticInfo>  findWeekStatsByUUID(@Nonnull String uuid);
-    List<StatisticInfo>  findMonthStatsByUUID(@Nonnull String uuid);
-    List<StatisticInfo>  findAllStatsByUUID(@Nonnull String uuid);
-
-    StatisticInfo refreshStatistic(@Nonnull String uuid,@Nonnull String vk);
-
-
-
+    void deleteStats(@Nonnull UUID uuid);
 
 
 }

@@ -16,15 +16,14 @@ public class User {
     private Integer id;
 
 
-
     @Column(name = "vk", length = 80)
     private String vk;
 
 
-    @Column(name = "email",length = 80)
+    @Column(name = "email", length = 80)
     private String email;
 
-    @Column(name = "password",length = 80)
+    @Column(name = "password", length = 80)
     private String password;
 
     @Column(name = "identify")
@@ -38,11 +37,9 @@ public class User {
     }
 
 
-
     public String getVk() {
         return vk;
     }
-
 
 
     public void setVk(String vk) {

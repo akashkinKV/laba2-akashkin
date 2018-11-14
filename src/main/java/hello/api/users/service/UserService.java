@@ -16,7 +16,7 @@ public interface UserService {
     UserInfo findUserByUid(@Nonnull UUID uuid);
 
     @Nullable
-    void registrationUser(@Nonnull UserInfo userinfo);
+    boolean registrationUser(@Nonnull UserInfo userinfo);
 
 
     String loginUser(@Nonnull UserInfo userinfo);

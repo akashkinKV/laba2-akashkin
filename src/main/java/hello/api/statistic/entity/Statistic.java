@@ -1,13 +1,10 @@
 package hello.api.statistic.entity;
 
-import com.google.common.base.MoreObjects;
-import org.apache.commons.lang.builder.EqualsBuilder;
-import org.apache.commons.lang.builder.HashCodeBuilder;
-
 import javax.persistence.*;
 
 import java.util.Date;
 import java.util.Objects;
+import java.util.UUID;
 
 
 @Entity
@@ -17,7 +14,6 @@ public class Statistic {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
 
 
     @Column(name = "subscribers")
@@ -49,7 +45,7 @@ public class Statistic {
     private Date date;
 
     @Column(name = "uid")
-    private String uid;
+    private UUID uid;
 
     public Integer getId() {
         return id;
@@ -124,11 +120,11 @@ public class Statistic {
     }
 
 
-    public String getUid() {
+    public UUID getUid() {
         return uid;
     }
 
-    public void setUid(String uid) {
+    public void setUid(UUID uid) {
         this.uid = uid;
     }
 

@@ -14,7 +14,7 @@ public class StatisticInfo {
     private Integer groups;
     private String lastactive;
     private Date date;
-    private String uid;
+    private UUID uid;
 
 
     public Integer getSubscribers() {
@@ -89,11 +89,11 @@ public class StatisticInfo {
         this.date = date;
     }
 
-    public String getUid() {
+    public UUID getUid() {
         return uid;
     }
 
-    public void setUid(String uid) {
+    public void setUid(UUID uid) {
         this.uid = uid;
     }
 }

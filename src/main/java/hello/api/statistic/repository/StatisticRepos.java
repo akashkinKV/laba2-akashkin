@@ -11,11 +11,12 @@ public interface StatisticRepos
         extends JpaRepository<Statistic, Integer> {
 
 
-    //   @Query("select * from Users p where p.nickname = 123 ")
+    List<Statistic> findFirst7ByUid(UUID uuid);
 
+    List<Statistic> findFirst30ByUid(UUID uuid);
 
-   List<Statistic> findFirst7ByUid(String uuid);
-   List<Statistic> findFirst30ByUid(String uuid);
-   List<Statistic> findAllByUid(String uuid);
+    List<Statistic> findAllByUid(UUID uuid);
 
+    @Transactional
+    void deleteByUid(UUID uuid);
 }

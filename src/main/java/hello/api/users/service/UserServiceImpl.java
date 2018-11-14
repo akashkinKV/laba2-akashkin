@@ -1,11 +1,17 @@
 package hello.api.users.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import hello.api.users.entity.User;
 import hello.api.users.model.UserInfo;
 import hello.api.users.repository.UserRepos;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -19,7 +25,11 @@ public class UserServiceImpl
 
     @Autowired
     private UserRepos userRepos;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
+    static final String URL_API_VK = "https://api.vk.com/method/users.get";
+    static final String VK_TOKEN = "5c5e70cfcf443268b00e8914fc9b752980d7c428691f9458d510eaa8f9ec1b7d16695aa764b516fc27a4f";
 
     @Nullable
     @Override
@@ -30,10 +40,24 @@ public class UserServiceImpl
 
     @Nullable
     @Override
-    public void registrationUser(@Nonnull UserInfo userInfo) {
+    public boolean registrationUser(@Nonnull UserInfo userInfo) {
+        UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(URL_API_VK)
+                .queryParam("user_ids", userInfo.getVk()).queryParam("fields", "online")
+                .queryParam("access_token", VK_TOKEN);
+        RestTemplate restTemplate = new RestTemplate();
 
-        if (userInfo.getUid() == null) userInfo.setUid(UUID.randomUUID());
-        userRepos.saveAndFlush(createUser(userInfo));
+        // Send request with GET method and default Headers.
+        String jsonString = restTemplate.getForObject(builder.toUriString(), String.class);
+        if (!jsonString.contains("error_code")) {
+
+            if (userInfo.getUid() == null) userInfo.setUid(UUID.randomUUID());
+            String encryptedPassword = passwordEncoder.encode(userInfo.getPassword());
+            userInfo.setPassword(encryptedPassword);
+            userRepos.saveAndFlush(createUser(userInfo));
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Nullable
@@ -71,8 +95,8 @@ public class UserServiceImpl
     }
 
     @Nonnull
-    private User createUser(@Nonnull String email, @Nonnull String password,
-                            @Nonnull String vk, @Nonnull boolean identify) {
+    private boolean createUser(@Nonnull String email, @Nonnull String password,
+                               @Nonnull String vk, @Nonnull boolean identify) {
 
         User user = new User();
 
@@ -81,7 +105,8 @@ public class UserServiceImpl
         user.setIdentify(identify);
         user.setUid(UUID.randomUUID());
         user.setVk(vk);
-        return user;
+        return true;
+
     }
 
     @Nonnull
@@ -104,5 +129,9 @@ public class UserServiceImpl
         user.setPassword(userInfo.getPassword());
         user.setUid(userInfo.getUid());
         return user;
+    }
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 }
