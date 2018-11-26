@@ -88,12 +88,12 @@ public class UsersControllerTest {
     public void updateUser() throws Exception {
 
         UserInfo request= new UserInfo();
-        request.setEmail("1234@bk.ru");
-        request.setVk(vk);
-        request.setPassword(password);
-        request.setUid(uuid);
+        request.setEmail("12345@bk.ru");
+       request.setVk(vk);
+       request.setPassword(password);
+        request.setUid(UUID.fromString("b4067e69-4de0-49ff-ba65-d657444b89e5"));
 
-        mvc.perform(put(URL_API_USERS_UPDATE).contentType(MediaType.APPLICATION_JSON).
+        mvc.perform(patch(URL_API_USERS_UPDATE).contentType(MediaType.APPLICATION_JSON).
                 content(gson.toJson(request))).andDo(print())
                 .andExpect(status().isOk());
     }

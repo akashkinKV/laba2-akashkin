@@ -67,7 +67,7 @@ public class UsersController {
         }
     }
 
-    @PutMapping("/update")
+    @PatchMapping("/update")
     public ResponseEntity updateUser(@RequestBody UserInfo requestUserDetails) {
         try {
 

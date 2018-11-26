@@ -59,7 +59,7 @@ import java.util.List;
 
                 for (int i = 0; i < allUsers.size(); i++) {
                     System.out.println(allUsers.get(i).getUid().toString());
-                    //createStatOneday(allUsers.get(i));
+                    createStatOneday(allUsers.get(i));
 //
 //                if(!allUsers.get(i).getVk().equals("No"))
 //                gateWay.createStatOneday(allUsers.get(i).getVk(),allUsers.get(i).getUid().toString());

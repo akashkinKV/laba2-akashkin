@@ -24,10 +24,7 @@ import com.sun.jersey.core.util.MultivaluedMapImpl;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 
 @RestController
@@ -125,6 +122,30 @@ public class GateWay {
     }
 
     ///////////////////////////////Statistic API///////////////////////////////
+    @PostMapping("/statistic.create")
+    public ResponseEntity createStatistic(@RequestBody UserInfo info) {
+        try {
+
+            RestTemplate restTemplate = new RestTemplate();
+
+            String url = URL_API_STATISTIC_CREATE_STAT;
+            ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
+
+            String requestJson =  ow.writeValueAsString(info);
+            System.out.println("jsoon"+requestJson);
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.APPLICATION_JSON);
+
+            HttpEntity<String> entity = new HttpEntity<String>(requestJson,headers);
+            restTemplate.postForObject(url, entity, String.class);
+
+            return new ResponseEntity(HttpStatus.CREATED);
+        } catch (Exception e) {
+            logger.error("user.createError", e);
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
     @GetMapping("/statistic.getAll")
     public ResponseEntity<List<StatisticInfo>> getStatAll(@RequestParam UUID uuid) {
         try {

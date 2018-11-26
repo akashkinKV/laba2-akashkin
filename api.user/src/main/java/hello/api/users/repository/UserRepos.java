@@ -20,9 +20,15 @@ public interface UserRepos
     @Transactional
     void deleteByUid(UUID uuid);
 
+
+
+
     @Transactional
     @Modifying
-    @Query("update User t set t.email = :email,t.vk=:vk,t.password=:password where t.uid = :uid")
+    @Query("update User t   set t.email = case  when :email  is not null then :email  end,\n" +
+            "    t.password= case when :password is not null then :password end,\n" +
+            "            t.vk=case when :vk is not null then :vk end\n" +
+            "     where t.uid = :uid")
     void updateUser(@Param("email") String email, @Param("vk") String vk,
                     @Param("password") String password, @Param("uid") UUID uid);
 

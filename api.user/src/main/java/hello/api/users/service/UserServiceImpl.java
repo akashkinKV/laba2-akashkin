@@ -75,6 +75,7 @@ public class UserServiceImpl
     @Nullable
     @Override
     public void updateUser(@Nonnull UserInfo userInfo) {
+        System.out.println("pass"+userInfo.getPassword());
         userRepos.updateUser(userInfo.getEmail(), userInfo.getVk(), userInfo.getPassword(), userInfo.getUid());
     }
 
