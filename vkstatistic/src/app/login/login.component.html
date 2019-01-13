@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4 bg-gradient-info">
+      <div class="p-10" style="height: 1500px;">
+
+          <form class="form-signin">
+
+              <div class="row justify-content-center">
+                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+              </div>
+              <label for="inputEmail" class="sr-only">Email address</label>
+              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="email" [(ngModel)]="email" >
+              <label for="inputPassword" class="sr-only">Password</label>
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="password" [(ngModel)]="password">
+              <div class="checkbox mb-4">
+                <label>
+                  <input type="checkbox" value="remember-me"> Запомнить меня
+                </label>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="login(email,password)">Войти</button>
+              <p class="mt-5 mb-3 text-muted text-center">&copy; 2018-2019</p>
+            </form>
+      </div>
+    
+  </div>
+  <div class="col-md-4"></div>
+</div>
+ 
+ 
+
