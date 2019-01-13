@@ -13,12 +13,16 @@ import { HomeComponent } from './home/home.component';
 import { UserServiceService } from './user-service.service';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { LogoutComponent } from './logout/logout.component';
+import { StartComponent } from './start/start.component';
 
 const appRoutes:Routes=
 [
-{path:'',component:HomeComponent},
+{path:'start',component:StartComponent},
+{path:'home',component:HomeComponent},
 {path:'user',component:UsersComponent},
 {path:'login',component:LoginComponent},
+{path:'logout',component:LogoutComponent},
 {path:'registration',component:RegistrationComponent},
 ]
 @NgModule({
@@ -27,7 +31,9 @@ const appRoutes:Routes=
     UsersComponent,
     HomeComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    LogoutComponent,
+    StartComponent
   ],
   imports: [
     HttpClientModule,

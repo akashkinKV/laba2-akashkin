@@ -24,7 +24,13 @@ User Name:<input type="text" [(ngModel)]="userName">
   </div>
   <div class="navbar-expand ml-auto navbar-nav">
     <div class="navbar-nav">
-      <a class="nav-item nav-link text-white" href="login">Войти</a>
+        <div *ngIf="condition; then thenBlock else elseBlock"></div>   
+        <ng-template #thenBlock>
+            <a class="nav-item nav-link text-white" href="login">Войти</a>
+      </ng-template>  
+       
+        <ng-template #elseBlock> <a class="nav-item nav-link text-white" href="logout">Выйти</a></ng-template>   
+     
       <a class="nav-item nav-link text-white" href="registration">Регистрация</a>
     </div>
   </div>

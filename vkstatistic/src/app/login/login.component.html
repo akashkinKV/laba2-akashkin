@@ -4,7 +4,17 @@
       <div class="p-10" style="height: 1500px;">
 
           <form class="form-signin">
-
+            <div *ngIf="condition; then thenBlock else elseBlock"></div>   
+            <ng-template #thenBlock>
+             <p>
+              <ngb-alert [dismissible]="false">
+                <strong>Ошибка!</strong> Неверные данные. Попробуйте занова
+              </ngb-alert>
+            </p>
+          </ng-template>  
+           
+            <ng-template #elseBlock></ng-template>   
+          
               <div class="row justify-content-center">
                 <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
               </div>
@@ -21,7 +31,9 @@
               <p class="mt-5 mb-3 text-muted text-center">&copy; 2018-2019</p>
             </form>
       </div>
-    
+
+     
+
   </div>
   <div class="col-md-4"></div>
 </div>
