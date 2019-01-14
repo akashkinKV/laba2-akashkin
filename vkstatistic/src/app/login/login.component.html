@@ -10,7 +10,7 @@
             <div *ngIf="condition; then thenBlock else elseBlock"></div>   
             <ng-template #thenBlock>
              <p>
-              <ngb-alert [dismissible]="false">
+                <ngb-alert type="danger" [dismissible]="false">
                 <strong>Ошибка!</strong> Неверные данные. Попробуйте занова
               </ngb-alert>
             </p>
@@ -19,14 +19,17 @@
             <ng-template #elseBlock></ng-template>   
           
               <div class="row justify-content-center">
-                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                <h1 class="h3 mb-3 font-weight-normal">Введите данные </h1>
               </div>
+              <label></label>
               <label for="inputEmail" class="sr-only">Email address</label>
               <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="email" [(ngModel)]="email" >
+              <label></label>
               <label for="inputPassword" class="sr-only">Password</label>
               <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="password" [(ngModel)]="password">
               <div class="checkbox mb-4">
                 <label>
+                    <p >   </p>       <p >   </p>       <p >   </p>  
                   <input type="checkbox" value="remember-me"> Запомнить меня
                 </label>
               </div>

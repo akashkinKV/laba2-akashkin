@@ -13,13 +13,13 @@ User Name:<input type="text" [(ngModel)]="userName">
 </div>
 <button class="btn-primary" (click)="search2()">Search2</button> -->
 
-<nav class="navbar navbar-light" style="background-color: #0095ff;">
+<nav class="navbar navbar-light  fixed-left" style="background-color: #0095ff;">
   <a class="navbar-brand text-white" href="/">VK Statistic</a>
   <div class="navbar-expand mr-auto">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active text-white" href="#">Home</a>
-      <a class="nav-item nav-link text-white" href="#">About</a>
-      <a class="nav-item nav-link text-white" href="#">Contact</a>
+      
+      <a class="nav-item nav-link text-white" href="/about">About</a>
+      <a class="nav-item nav-link text-white" href="/Contact">Contact</a>
     </div>
   </div>
   <div class="navbar-expand ml-auto navbar-nav">
@@ -35,9 +35,27 @@ User Name:<input type="text" [(ngModel)]="userName">
     </div>
   </div>
 </nav>
- 
 
- 
+<div *ngIf="condition2; then thenBlock2 else elseBlock2"></div>   
+<ng-template #elseBlock2>  
+
+
+  
+ </ng-template> 
+
+<!-- 
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-2">
+           
+          </div>
+          
+        </div> -->
+   
+  
+   
 
 <!--/.Navbar-->
 <router-outlet></router-outlet>

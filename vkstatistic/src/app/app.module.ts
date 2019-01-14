@@ -14,7 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LogoutComponent } from './logout/logout.component';
 import { StartComponent } from './start/start.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+
 
 const appRoutes:Routes=
 [
@@ -31,8 +31,7 @@ const appRoutes:Routes=
     LoginComponent,
     RegistrationComponent,
     LogoutComponent,
-  StartComponent,
-  DashboardComponent
+  StartComponent
   ],
   imports: [
     HttpClientModule,

@@ -49,7 +49,6 @@ export class LoginComponent implements OnInit {
   login(email: string,password: string)
   {
     
-    var isAuth=true;
     const user: UserInfo = { email:email,password:password } as UserInfo;
 
     this.http.post(this.BASE_API_URL+'user.login', user,{
@@ -67,6 +66,7 @@ export class LoginComponent implements OnInit {
               if(uuid!=null)
               {
               this.router.navigate(['home']);
+              window.location.reload();
               }
 
             },

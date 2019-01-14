@@ -16,6 +16,7 @@ export class AppComponent implements OnInit,AfterViewInit {
   // constructor(private userServiceService: UserServiceService)
   // {
   condition: boolean=false;
+  condition2: boolean=false;
   // }
   constructor(private http: HttpClient, private router:Router,private elementRef: ElementRef)
   {
@@ -29,9 +30,11 @@ export class AppComponent implements OnInit,AfterViewInit {
     if(uuid!=null)
     {
     this.condition=false;
+    this.condition2=false;
     }  
     else{
       this.condition=true; 
+      this.condition2=true;
     }
   //   this.userServiceService.getData().subscribe((response)=>{
   //         this.response=response;

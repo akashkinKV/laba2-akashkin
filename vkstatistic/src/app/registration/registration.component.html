@@ -1,3 +1,63 @@
-<p>
-  registration works!
-</p>
+<div class="row">
+  <div class="col-md-2 col-md-offset-5"></div>
+</div>
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4 bg-gradient-info">
+    <div class="p-10" style="height: 1500px;">
+
+        <form class="form-signin">
+          <div *ngIf="condition; then thenBlock else elseBlock"></div>   
+          <ng-template #thenBlock>
+           <p>
+            <ngb-alert type="danger" [dismissible]="false">
+              <strong>Ошибка!</strong> Неверные данные. Попробуйте занова
+            </ngb-alert>
+          </p>
+        </ng-template>  
+         
+          <ng-template #elseBlock></ng-template>   
+        
+            <div class="row justify-content-center">
+         
+              <h1 class="h3 mb-3 font-weight-normal">Введите данные</h1>
+            </div>
+            <label for="inputVk" class="sr-only">Vk id</label>
+            <input type="vk" id="inputVk" class="form-control" placeholder="VK id" required autofocus name="vk" [(ngModel)]="vk" >
+            <label > </label>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="email" [(ngModel)]="email" >
+            <label > </label>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="password" [(ngModel)]="password">
+            <div class="checkbox mb-4">
+         
+              
+            </div>
+            <ng-template #content let-c="close" let-d="dismiss">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="modal-basic-title">Регистрация прошла успешно!</h4>
+                 
+                </div>
+                <div class="modal-body">
+                  <p>Войдите в аккаунт.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary center-block"  (click)="rotate();d('Cross click');">Ок</button>
+                </div>
+              </ng-template>
+              
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="registration(vk,email,password,content);">Создать аккаунт</button>
+           
+            <p class="mt-5 mb-3 text-muted text-center">&copy; 2018-2019</p>
+          </form>
+    </div>
+
+
+</div>
+<div class="col-md-4"></div>
+</div>
+
+
+
