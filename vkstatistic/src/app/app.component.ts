@@ -1,4 +1,4 @@
-import { Component,OnInit} from '@angular/core';
+import { Component,OnInit, ElementRef,AfterViewInit} from '@angular/core';
 import { UserServiceService } from './user-service.service';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -8,19 +8,22 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit,AfterViewInit {
 //   response:any;
 // userName:string="";
 
-  title = 'vkstatistic';
+  title = 'VK Statistic';
   // constructor(private userServiceService: UserServiceService)
   // {
   condition: boolean=false;
   // }
-  constructor(private http: HttpClient, private router:Router)
+  constructor(private http: HttpClient, private router:Router,private elementRef: ElementRef)
   {
     
   }
+  ngAfterViewInit(){
+  //  this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '';
+ }
    ngOnInit(){
     var uuid=localStorage.getItem('UUID');
     if(uuid!=null)
