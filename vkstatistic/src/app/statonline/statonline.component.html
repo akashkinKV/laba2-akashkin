@@ -1,0 +1,97 @@
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+              <ul class="nav flex-column">
+
+                <div class="list-group">
+                    <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" 
+                    href="/home" role="tab" aria-controls="home">Главная</a>
+                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" 
+                    href="/statistic" role="tab" aria-controls="profile">Статистика</a>
+                    <a class="list-group-item list-group-item-action list-group-item-danger" id="list-messages-list" data-toggle="list" 
+                    href="/statonline" role="tab" aria-controls="messages">Онлайн статистика</a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" 
+                    href="/setting" role="tab" aria-controls="settings">Настройки</a>
+                  </div>
+                  
+           
+            
+            </ul>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Онлайн статистика
+              </h1>
+          
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group mr-2">
+                <button class="btn btn-sm btn-outline-secondary">Share</button>
+                <button class="btn btn-sm btn-outline-secondary">Export</button>
+              </div>
+              <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                <span data-feather="calendar"></span>
+                This week
+              </button>
+         
+            </div>
+          </div>
+
+          <table mdbTable>
+            <thead class="black white-text">
+              <tr>
+                <th *ngFor="let head of displayedColumns" scope="col">{{head}} </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr mdbTableCol *ngFor="let el of dataSource">
+                <th scope="row">{{el.date}}</th>
+                <td>{{el.online}}</td>
+                <td>{{el.mobile}}</td>
+              </tr>
+            </tbody>
+            </table>  
+
+          <h2>Section title</h2>
+        
+          <!-- <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource">
+
+    <ng-container matColumnDef="date">
+        <mat-header-cell *matHeaderCellDef>Дата</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.date}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="online">
+        <mat-header-cell *matHeaderCellDef>В онлайне</mat-header-cell>
+        <mat-cell class="description-cell"
+                  *matCellDef="let element"> {{element.online}} </mat-cell>
+
+    </ng-container>
+
+    <ng-container matColumnDef="mobile">
+        <mat-header-cell *matHeaderCellDef>Мобильный</mat-header-cell>
+        <mat-cell class="duration-cell"
+                  *matCellDef="let element"> {{element.mobile}}</mat-cell>
+    </ng-container>
+
+   
+     <mat-header-row class="black white-text" *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+    <mat-row class="black white-text" *matRowDef="let row; columns: displayedColumns"></mat-row> 
+    
+   
+    
+
+</mat-table> -->
+   
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+   

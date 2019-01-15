@@ -61,6 +61,7 @@ export class LoginComponent implements OnInit {
             { console.log(res);
               this.user=Object.assign(new UserInfo(), res);
               localStorage.setItem('UUID',this.user.uid);
+              localStorage.setItem('vk',this.user.vk);
               this.condition=false;
               var uuid=localStorage.getItem('UUID');
               if(uuid!=null)
