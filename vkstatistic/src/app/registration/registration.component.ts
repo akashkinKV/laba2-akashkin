@@ -20,6 +20,8 @@ export class RegistrationComponent implements OnInit {
  
   //constructor(private router:Router) { }
   condition: boolean=false;
+  condition2: boolean=false;
+  condition3: boolean=false;
   constructor(private http:HttpClient,
     private router:Router,config: NgbModalConfig, private modalService: NgbModal) {
     // customize default values of modals used by this component tree
@@ -58,7 +60,17 @@ export class RegistrationComponent implements OnInit {
   registration(vk:string, email: string,password: string,content)
   {
     
-
+if(vk==null || email==null || password==null  )
+{
+ 
+  this.condition2=true;  
+}
+else{
+  this.condition2=false;  
+  var regexp = new RegExp('\\b[\\w.%-]+@[-.\\w]+\\.[A-Za-z]{2,4}\\b');
+ var test = regexp.test(email);
+ if(test==true){
+  this.condition3=false;  
     const user: UserInfo = {vk:vk, email:email,password:password } as UserInfo;
 
     this.http.post(this.BASE_API_URL+'user.create', user,{
@@ -78,8 +90,11 @@ export class RegistrationComponent implements OnInit {
              
             }
           );
-
-      
+          }
+          else{
+            this.condition3=true;  
+          }
+          }
           
   //         subscribe((response)=>{ 
            

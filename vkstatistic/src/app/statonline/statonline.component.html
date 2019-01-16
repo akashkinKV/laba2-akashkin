@@ -39,54 +39,43 @@
          
             </div>
           </div>
+         
+            
 
-          <table mdbTable>
-            <thead class="black white-text">
-              <tr>
-                <th *ngFor="let head of displayedColumns" scope="col">{{head}} </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr mdbTableCol *ngFor="let el of dataSource">
-                <th scope="row">{{el.date}}</th>
-                <td>{{el.online}}</td>
-                <td>{{el.mobile}}</td>
-              </tr>
-            </tbody>
-            </table>  
 
-          <h2>Section title</h2>
-        
-          <!-- <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource">
+       
+          <div *ngIf="response">
+              <div class="table-responsive">
+                  <table class="table">
+                    <thead class="thead-dark" >
+                      <tr>
+                        <th *ngFor="let head of displayedColumns" scope="col">{{head}} </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let el of dataSource.reverse() | slice:(page-1)*10:page*10 ">
+            
 
-    <ng-container matColumnDef="date">
-        <mat-header-cell *matHeaderCellDef>Дата</mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.date}} </mat-cell>
-    </ng-container>
 
-    <ng-container matColumnDef="online">
-        <mat-header-cell *matHeaderCellDef>В онлайне</mat-header-cell>
-        <mat-cell class="description-cell"
-                  *matCellDef="let element"> {{element.online}} </mat-cell>
+                        <th scope="row">{{el.date | date: 'dd MMM yyyy HH:mm'}}</th>
+                        <td>{{el.online}}</td>
+          
+                        <td>{{el.mobile}}</td>
+                      </tr>
 
-    </ng-container>
+           
+                    </tbody>
+         
 
-    <ng-container matColumnDef="mobile">
-        <mat-header-cell *matHeaderCellDef>Мобильный</mat-header-cell>
-        <mat-cell class="duration-cell"
-                  *matCellDef="let element"> {{element.mobile}}</mat-cell>
-    </ng-container>
-
-   
-     <mat-header-row class="black white-text" *matHeaderRowDef="displayedColumns"></mat-header-row>
-
-    <mat-row class="black white-text" *matRowDef="let row; columns: displayedColumns"></mat-row> 
-    
-   
-    
-
-</mat-table> -->
-   
+                     
+                
+                    </table>    
+                        <ngb-pagination  class="d-flex justify-content-center" [collectionSize]="dataSource.length" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+                       
+                    </div>
+             
+       
+</div>
         </main>
       </div>
     </div>

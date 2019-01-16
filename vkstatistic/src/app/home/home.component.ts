@@ -11,26 +11,23 @@ import { map } from 'rxjs/operators';
 export class HomeComponent implements OnInit {
 
 
- URL_API_VK:string = "https://api.vk.com/method/users.get";
-   VK_TOKEN:string = "5c5e70cfcf443268b00e8914fc9b752980d7c428691f9458d510eaa8f9ec1b7d16695aa764b516fc27a4f";
-
+  BASE_API_URL:any='https://api-my-gateway.herokuapp.com/api-gateway/statistic.getAll';
 
   constructor(private http:HttpClient) { }
 
 stat:Stat;
 response:any;
   ngOnInit() {
-    let params = new HttpParams().set("user_ids","basta").set("fields", "counters").set("access_token",this.VK_TOKEN); 
+    let params = new HttpParams().set("uuid",localStorage.getItem('UUID')).set("vk", localStorage.getItem('vk'))
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    this.http.get(this.URL_API_VK,{ headers: headers, params: params }).subscribe(
+    this.http.get(this.BASE_API_URL,{ headers: headers, params: params }).subscribe(
         res =>
         { console.log(Object.assign( res));
          this.response=res;
-           this.stat=Object.assign( res);
-           
-          console.log(this.stat);
-          console.log(this.stat[0]);
+         console.log(this.response);
+         console.log(this.response[0]);
+        
          
         },
         msg => {

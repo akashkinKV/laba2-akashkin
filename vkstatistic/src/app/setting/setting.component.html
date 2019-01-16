@@ -26,7 +26,7 @@
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">Настройки аккаунта
               </h1>
-            
+             
             
             <ng-template #content let-c="close" let-d="dismiss">
                 <div class="modal-header">
@@ -44,7 +44,24 @@
               </ng-template>
               
 
-            
+               
+              <ng-template #content2 let-c="close" let-d="dismiss">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="modal-basic-title">Вы точно хотите изменить vk id?</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Все данные о старой странице удалятся</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary center-block"  (click)="rotate2();d('Cross click');">Да, я согласен</button>
+                  </div>
+                </ng-template>
+                
+  
+              
            
           </div>
 
@@ -54,6 +71,24 @@
           <div class="table-responsive">
             <button class="btn btn-lg btn-outline-primary" type="submit" (click)="delete(content);">Удалить аккаунт </button>
           </div>
+          <br>
+          <div class="form-group col-12">
+              <hr>
+     </div>
+          <label for="typeahead-basic">Изменить vk id:</label>
+      
+          <div class="row">
+              <div class="col-sm-3 col-md-6 col-lg-4">
+                
+                  <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="model" />
+                  <br>
+     
+                      <button class="btn btn-lg btn-outline-primary" type="submit" (click)="delete2(content2);">Изменить </button>
+              
+              </div>
+              <div class="col-sm-9 col-md-6 col-lg-8"> </div>
+            </div>
+          
         </main>
       </div>
     </div>

@@ -11,11 +11,13 @@ export class StatonlineComponent implements OnInit {
 
  URL_Base:any="https://api-my-gateway.herokuapp.com/api-gateway/statOnline.getAll" 
 
-  displayedColumns: string[] = ['date', 'online', 'mobile'];
+  displayedColumns: string[] = ['Дата и время', 'В онлайне', 'Мобилный'];
   
   dataSource = null;
+  page = 1;
+  pagecount = 0;
   constructor(private http:HttpClient) { }
-
+response:any;
   ngOnInit() {
     var uuid=localStorage.getItem('UUID');
     let params = new HttpParams().set("uuid",uuid);
@@ -25,7 +27,7 @@ export class StatonlineComponent implements OnInit {
         res =>
         { console.log(Object.assign( res));
          this.dataSource=res;
-          
+         this.response=res;
          
         },
         msg => {
@@ -37,10 +39,5 @@ export class StatonlineComponent implements OnInit {
   }
 
 }
-export interface PeriodicElement {
-  date: Date;
-  online: boolean;
-  mobile: boolean;
-  
-}
+
 
