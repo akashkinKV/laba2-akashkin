@@ -1,0 +1,13 @@
+oauth20.host=false
+oauth20.port=8090
+oauth20.database=false
+db_uri=false
+redis.sentinels=false
+redis.master=false
+apifest-oauth20.nodes=false
+custom.classes.jar=false
+user.authenticate.class=com.apifest.oauth20.UserAuthentication
+custom.grant_type=false
+custom.grant_type.class=false
+hazelcast.password=false
+cassandra.contanctPoints=false
