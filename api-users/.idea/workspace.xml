@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f4ce9154-d5df-4f41-b886-20c264b032e8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/api/users/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/api/users/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/gs-spring-boot (1).iml" beforeDir="false" afterPath="$PROJECT_DIR$/../api.gateway/gs-spring-boot (1).iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api.gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/src/main/java/hello/api/gateway/GateWay.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api.gateway/src/main/java/hello/api/gateway/GateWay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../api.gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/src/test/java/hello/api/gateway/GateWayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api.gateway/src/test/java/hello/api/gateway/GateWayTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/src/test/java/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../api.gateway/src/test/java/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../api.gateway/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/gateway/GateWay.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/gateway/GateWay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/statistic/entity/Statistic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/statistic/model/StatisticInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/statistic/repository/StatisticRepos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/statistic/service/StatisticService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/statistic/service/StatisticServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/statistic/web/StatisticController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/statonline/entity/StatOnline.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/statonline/model/StatOnlineInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/statonline/repository/StatOnlineRepos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/statonline/service/StatOnlineService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/statonline/service/StatOnlineServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/statonline/web/StatOnlineController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/users/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/users/model/UserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/users/repository/UserRepos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/users/security/passwordEncoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/users/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/users/service/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/api/users/web/UsersController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/classes/hello/scheduler/ScheduledTasks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/test-classes/hello/HelloControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/test-classes/hello/api/gateway/GateWayTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api.gateway/target/test-classes/hello/api/gateway/GateWayTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/test-classes/hello/api/statistic/web/StatisticControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/test-classes/hello/api/statonline/web/StatOnlineControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.gateway/target/test-classes/hello/api/users/web/UsersControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/src/main/java/hello/api/statistic/repository/StatisticRepos.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api.statistic/src/main/java/hello/api/statistic/repository/StatisticRepos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/src/main/java/hello/api/statistic/service/StatisticService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api.statistic/src/main/java/hello/api/statistic/service/StatisticService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/src/main/java/hello/api/statistic/service/StatisticServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api.statistic/src/main/java/hello/api/statistic/service/StatisticServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/src/main/java/hello/api/statistic/web/StatisticController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api.statistic/src/main/java/hello/api/statistic/web/StatisticController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../api.statistic/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/src/test/java/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../api.statistic/src/test/java/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../api.statistic/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/gateway/GateWay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/statistic/repository/StatisticRepos.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/statistic/repository/StatisticRepos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/statistic/service/StatisticService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/statistic/service/StatisticService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/statistic/service/StatisticServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/statistic/service/StatisticServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/statistic/web/StatisticController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/statistic/web/StatisticController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/statonline/entity/StatOnline.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/statonline/model/StatOnlineInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/statonline/repository/StatOnlineRepos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/statonline/service/StatOnlineService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/statonline/service/StatOnlineServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/statonline/web/StatOnlineController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/users/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/users/model/UserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/users/repository/UserRepos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/users/security/passwordEncoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/users/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/users/service/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/api/users/web/UsersController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/classes/hello/scheduler/ScheduledTasks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/test-classes/hello/HelloControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/test-classes/hello/api/gateway/GateWayTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/test-classes/hello/api/statonline/web/StatOnlineControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statistic/target/test-classes/hello/api/users/web/UsersControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/src/main/java/hello/api/statonline/repository/StatOnlineRepos.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api.statonline/src/main/java/hello/api/statonline/repository/StatOnlineRepos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../api.statonline/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/src/test/java/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../api.statonline/src/test/java/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../api.statonline/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/classes/hello/api/gateway/GateWay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/classes/hello/api/statistic/entity/Statistic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/classes/hello/api/statistic/model/StatisticInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/classes/hello/api/statistic/repository/StatisticRepos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/classes/hello/api/statistic/service/StatisticService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/classes/hello/api/statistic/service/StatisticServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/classes/hello/api/statistic/web/StatisticController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/classes/hello/api/users/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/classes/hello/api/users/model/UserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/classes/hello/api/users/repository/UserRepos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/classes/hello/api/users/security/passwordEncoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/classes/hello/api/users/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/classes/hello/api/users/service/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/classes/hello/api/users/web/UsersController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/classes/hello/scheduler/ScheduledTasks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/test-classes/hello/HelloControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/test-classes/hello/api/gateway/GateWayTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/test-classes/hello/api/statistic/web/StatisticControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api.statonline/target/test-classes/hello/api/users/web/UsersControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scheduler/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scheduler/target/classes/hello/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scheduler/target/classes/hello/scheduler/ScheduledTasks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scheduler/target/classes/hello/scheduler/model/UserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scheduler/target/classes/messages/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scheduler/target/classes/templates/index.html" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/../api.gateway/target/" />
+    <ignored path="$PROJECT_DIR$/../api.statistic/target/" />
+    <ignored path="$PROJECT_DIR$/../api.statonline/target/" />
+    <ignored path="$PROJECT_DIR$/../scheduler/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hello/api/users/web/UsersController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#deleteUser#0;class#UsersController#0" />
+                <element signature="method#findAllUsers#0;class#UsersController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hello/api/users/service/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="66" column="58" selection-start-line="66" selection-start-column="58" selection-end-line="66" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hello/api/users/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hello/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>email</find>
+      <find>StatisticInfo</find>
+      <find>statRepos</find>
+      <find>URL_API_STATISTIC</find>
+      <find>URL_API_STATISTIC_CREATE_STAT</find>
+      <find>URL_API_STATONLINE</find>
+      <find>UAER</find>
+      <find>log</find>
+      <find>url</find>
+      <find>class</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>userRepos</replace>
+      <replace>statRepos</replace>
+      <replace>statisticRepos</replace>
+      <replace>StatOnlineInfo</replace>
+      <replace>USER</replace>
+      <replace>URL_API_STATONLINE</replace>
+      <replace>url2</replace>
+      <replace>uuid</replace>
+      <replace>userInfohea</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/hello/api/statistic/repository/StatisticRepos.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/api/statistic/entity/Statistic.java" />
+        <option value="$PROJECT_DIR$/src/test/java/hello/api/gateway/GateWayTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/api/statistic/web/StatisticController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/hello/api/statistic/web/StatisticControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/api/statonline/web/StatOnlineController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/Scheduler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/ScheduledTasks.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/api/gateway/GateWay.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/scheduler/ScheduledTasks.java" />
+        <option value="$PROJECT_DIR$/src/test/java/hello/api/statonline/web/StatOnlineControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/Application.java" />
+        <option value="$PROJECT_DIR$/../api.gateway/src/main/java/hello/Application.java" />
+        <option value="$PROJECT_DIR$/../api.statistic/src/main/java/hello/Application.java" />
+        <option value="$PROJECT_DIR$/../api.statonline/src/main/java/hello/Application.java" />
+        <option value="$PROJECT_DIR$/../api.gateway/src/main/java/hello/api/gateway/models/StatisticInfo.java" />
+        <option value="$PROJECT_DIR$/../api.gateway/src/main/java/hello/api/gateway/models/StatOnlineInfo.java" />
+        <option value="$PROJECT_DIR$/../api.gateway/src/main/java/hello/api/gateway/models/UserInfo.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../scheduler/src/main/java/hello/scheduler/model/UserInfo.java" />
+        <option value="$PROJECT_DIR$/../scheduler/src/main/java/hello/Application.java" />
+        <option value="$PROJECT_DIR$/../scheduler/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/../scheduler/pom.xml" />
+        <option value="$PROJECT_DIR$/../scheduler/src/main/java/hello/scheduler/ScheduledTasks.java" />
+        <option value="$PROJECT_DIR$/../api.statonline/pom.xml" />
+        <option value="$PROJECT_DIR$/../api.statistic/pom.xml" />
+        <option value="$PROJECT_DIR$/../api.statistic/src/test/java/hello/api/statistic/web/StatisticControllerTest.java" />
+        <option value="$PROJECT_DIR$/../api.statonline/src/test/java/hello/api/statonline/web/StatOnlineControllerTest.java" />
+        <option value="$USER_HOME$/Desktop/Unity-MNIST-master/Unity-Files/MNIST/Assets/Scripts/MNIST_Classifier.cs" />
+        <option value="$USER_HOME$/Desktop/MNIST_Classifier.cs" />
+        <option value="$PROJECT_DIR$/../api.statistic/src/test/java/resources/application.properties" />
+        <option value="$PROJECT_DIR$/../api.statonline/src/test/java/resources/application.properties" />
+        <option value="$PROJECT_DIR$/../api.statonline/src/main/java/hello/api/statonline/repository/StatOnlineRepos.java" />
+        <option value="$PROJECT_DIR$/../api.gateway/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/../api.gateway/src/test/java/resources/application.properties" />
+        <option value="$PROJECT_DIR$/../api.gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/hello/api/users/web/UsersControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/api/users/repository/UserRepos.java" />
+        <option value="$PROJECT_DIR$/../api.gateway/src/test/java/hello/api/gateway/GateWayTest.java" />
+        <option value="$PROJECT_DIR$/../api.statistic/src/main/java/hello/api/statistic/service/StatisticService.java" />
+        <option value="$PROJECT_DIR$/../api.statistic/src/main/java/hello/api/statistic/web/StatisticController.java" />
+        <option value="$PROJECT_DIR$/../api.statistic/src/main/java/hello/api/statistic/repository/StatisticRepos.java" />
+        <option value="$PROJECT_DIR$/../api.statonline/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/../api.statistic/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/../api.statistic/src/main/java/hello/api/statistic/service/StatisticServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/api/users/service/UserService.java" />
+        <option value="$PROJECT_DIR$/../api.gateway/src/main/java/hello/api/gateway/GateWay.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/api/users/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/api/users/web/UsersController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="755" />
+    <option name="y" value="64" />
+    <option name="width" value="540" />
+    <option name="height" value="440" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="gs-spring-boot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gs-spring-boot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-users" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gs-spring-boot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-users" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gs-spring-boot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-users" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gs-spring-boot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-users" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hello" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gs-spring-boot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-users" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hello" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gs-spring-boot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-users" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hello" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gs-spring-boot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-users" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="A&#9;PSI&#9;JAVA://hello.Application" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547378688001" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="hello.api.gateway" />
+      <recent name="hello.api.statonline.web" />
+      <recent name="hello.api.statistic.web" />
+      <recent name="hello.api.users.web" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="hello.scheduler.model" />
+      <recent name="hello.api.gateway.models" />
+      <recent name="hello.model" />
+      <recent name="hello.repository" />
+      <recent name="hello.entity" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\git\14\src\main\java\hello\api" />
+      <recent name="C:\git\14\src\test\java" />
+      <recent name="C:\git\14\src\main\java\hello" />
+      <recent name="C:\git\11\src\main\java\hello" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Application (1)">
+    <configuration name="Application (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hello.Application" />
+      <module name="gs-spring-boot (2)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hello.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hello.Application" />
+      <module name="gs-spring-boot (1)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hello.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hello.Application" />
+      <module name="gs-spring-boot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hello.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StatisticControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gs-spring-boot (2)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hello.api.statistic.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hello.api.statistic.web" />
+      <option name="MAIN_CLASS_NAME" value="hello.api.statistic.web.StatisticControllerTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsersControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gs-spring-boot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hello.api.users.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hello.api.users.web" />
+      <option name="MAIN_CLASS_NAME" value="hello.api.users.web.UsersControllerTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="spring-boot:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Application (2)" />
+      <item itemvalue="Application.Application (1)" />
+      <item itemvalue="Application.Application" />
+      <item itemvalue="JUnit.StatisticControllerTest" />
+      <item itemvalue="JUnit.UsersControllerTest" />
+      <item itemvalue="Maven.Unnamed" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application (1)" />
+        <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.UsersControllerTest" />
+        <item itemvalue="JUnit.StatisticControllerTest" />
+        <item itemvalue="Application.Application (2)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f4ce9154-d5df-4f41-b886-20c264b032e8" name="Default Changelist" comment="" />
+      <created>1539883313028</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1539883313028</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="GateWayTest - 2018.11.28 at 16h 51m 22s.xml">
+      <configuration name="GateWayTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GateWayTest - 2018.11.28 at 16h 55m 06s.xml">
+      <configuration name="GateWayTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UsersControllerTest - 2018.11.28 at 16h 56m 49s.xml">
+      <configuration name="UsersControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GateWayTest - 2018.11.28 at 17h 08m 53s.xml">
+      <configuration name="GateWayTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GateWayTest - 2018.11.28 at 17h 12m 49s.xml">
+      <configuration name="GateWayTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UsersControllerTest - 2018.11.28 at 17h 33m 28s.xml">
+      <configuration name="UsersControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UsersControllerTest_updateUuidUser - 2018.11.28 at 18h 06m 11s.xml">
+      <configuration name="UsersControllerTest.updateUuidUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GateWayTest - 2018.11.28 at 19h 20m 14s.xml">
+      <configuration name="GateWayTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StatisticControllerTest - 2018.11.28 at 21h 17m 45s.xml">
+      <configuration name="StatisticControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UsersControllerTest - 2018.12.11 at 22h 06m 45s.xml">
+      <configuration name="UsersControllerTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27689487" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3298731" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4083045" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39907727" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3298731" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.24567474" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3281493" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.1828479" />
+    </layout>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../scheduler/src/main/resources/messages/messages.properties" />
+    <entry file="file://$PROJECT_DIR$/../scheduler/CONTRIBUTING.adoc" />
+    <entry file="file://$PROJECT_DIR$/../scheduler/target/classes/application.properties" />
+    <entry file="file://$PROJECT_DIR$/../scheduler/src/main/resources/application.properties" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.10.RELEASE/spring-core-5.0.10.RELEASE.jar!/org/springframework/util/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scheduler/target/classes/hello/Application.class" />
+    <entry file="file://$PROJECT_DIR$/../scheduler/target/classes/hello/scheduler/ScheduledTasks.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/api/users/model/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../api.statonline/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/../api.statistic/pom.xml" />
+    <entry file="file://$USER_HOME$/Desktop/MNIST_Classifier.cs" />
+    <entry file="file://$USER_HOME$/Desktop/Unity-MNIST-master/Unity-Files/MNIST/Assets/Scripts/MNIST_Classifier.cs" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/api/users/security/passwordEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../api.statistic/src/test/java/resources/application.properties" />
+    <entry file="file://$PROJECT_DIR$/../api.statonline/src/test/java/resources/application.properties" />
+    <entry file="file://$PROJECT_DIR$/../api.statonline/src/main/java/hello/api/statonline/repository/StatOnlineRepos.java" />
+    <entry file="file://$PROJECT_DIR$/../scheduler/src/main/java/hello/Application.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="35" column="21" selection-start-line="31" selection-start-column="7" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scheduler/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/../api.gateway/src/test/java/resources/application.properties" />
+    <entry file="file://$PROJECT_DIR$/../api.gateway/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/../scheduler/src/main/java/hello/scheduler/ScheduledTasks.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/api/users/repository/UserRepos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="44" column="38" lean-forward="true" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../api.statistic/src/main/java/hello/api/statistic/model/StatisticInfo.java" />
+    <entry file="file://$PROJECT_DIR$/../api.statistic/src/main/java/hello/api/statistic/repository/StatisticRepos.java" />
+    <entry file="file://$PROJECT_DIR$/../api.statistic/src/test/java/hello/api/statistic/web/StatisticControllerTest.java" />
+    <entry file="file://$PROJECT_DIR$/../api.gateway/src/main/java/hello/api/gateway/models/StatisticInfo.java" />
+    <entry file="file://$PROJECT_DIR$/../api.gateway/src/main/java/hello/api/gateway/models/StatOnlineInfo.java" />
+    <entry file="file://$PROJECT_DIR$/../api.gateway/src/main/java/hello/api/gateway/models/UserInfo.java" />
+    <entry file="file://$PROJECT_DIR$/../api.gateway/src/main/java/hello/Application.java" />
+    <entry file="file://$PROJECT_DIR$/../api.statistic/src/main/java/hello/api/statistic/service/StatisticService.java" />
+    <entry file="file://$PROJECT_DIR$/../api.statonline/src/test/java/hello/api/statonline/web/StatOnlineControllerTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/hello/api/users/web/UsersControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../api.statistic/src/main/java/hello/api/statistic/entity/Statistic.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/resources/messages/messages.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="53" selection-start-line="53" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../api.statonline/src/main/resources/application.properties" />
+    <entry file="file://$PROJECT_DIR$/../api.statistic/src/main/java/hello/Application.java" />
+    <entry file="file://$PROJECT_DIR$/../api.statonline/src/main/java/hello/Application.java" />
+    <entry file="file://$PROJECT_DIR$/../api.statonline/src/main/java/hello/api/statonline/web/StatOnlineController.java" />
+    <entry file="file://$PROJECT_DIR$/../api.statistic/src/main/resources/application.properties" />
+    <entry file="file://$PROJECT_DIR$/../api.statistic/src/main/java/hello/api/statistic/web/StatisticController.java" />
+    <entry file="file://$PROJECT_DIR$/../api.statistic/src/main/java/hello/api/statistic/service/StatisticServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/../api.gateway/src/test/java/hello/api/gateway/GateWayTest.java" />
+    <entry file="file://$PROJECT_DIR$/../api.gateway/src/main/resources/application.properties" />
+    <entry file="file://$PROJECT_DIR$/../api.gateway/src/main/java/hello/api/gateway/GateWay.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/api/users/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/api/users/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="66" column="58" selection-start-line="66" selection-start-column="58" selection-end-line="66" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/api/users/web/UsersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#deleteUser#0;class#UsersController#0" />
+            <element signature="method#findAllUsers#0;class#UsersController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
