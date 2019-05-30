@@ -26,7 +26,14 @@
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">Настройки аккаунта
               </h1>
-             
+              <div *ngIf="condition; then thenBlock3"></div>   
+              <ng-template #thenBlock3>
+               <p>
+                <ngb-alert type="danger" [dismissible]="false">
+                  <strong>Ошибка!</strong> Попробуйте позже
+                </ngb-alert>
+              </p>
+            </ng-template>  
             
             <ng-template #content let-c="close" let-d="dismiss">
                 <div class="modal-header">

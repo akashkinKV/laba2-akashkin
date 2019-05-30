@@ -1,0 +1,93 @@
+<div class="row">
+  <div class="col-md-2 col-md-offset-5"></div>
+</div>
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4 bg-gradient-info">
+    <div class="p-10" style="height: 1500px;">
+
+        <form class="form-signin">
+          <div *ngIf="condition; then thenBlock else elseBlock"></div>   
+          <ng-template #thenBlock>
+           <p>
+            <ngb-alert type="danger" [dismissible]="false">
+              <strong>Ошибка!</strong> Неверные данные. Попробуйте занова
+            </ngb-alert>
+          </p>
+        </ng-template>  
+         
+          <ng-template #elseBlock></ng-template>   
+          <div *ngIf="condition2; then thenBlock2 else elseBlock2"></div>   
+          <ng-template #thenBlock2>
+           <p>
+            <ngb-alert type="danger" [dismissible]="false">
+              <strong>Ошибка!</strong> Заполните пустые поля
+            </ngb-alert>
+          </p>
+        </ng-template>  
+         
+          <ng-template #elseBlock2></ng-template>   
+          <div *ngIf="condition3; then thenBlock3 else elseBlock3"></div>   
+          <ng-template #thenBlock3>
+           <p>
+            <ngb-alert type="danger" [dismissible]="false">
+              <strong>Ошибка!</strong> Email не соответствует
+            </ngb-alert>
+          </p>
+        </ng-template>  
+        
+          <ng-template #elseBlock3></ng-template>   
+          
+        
+            <div class="row justify-content-center">
+         
+              <h1 class="h3 mb-3 font-weight-normal">Введите данные</h1>
+            </div>
+            <label for="inputVk" class="sr-only">Название приложения</label>
+            <input type="name" id="inputName" class="form-control" placeholder="Название приложения" required autofocus name="name" [(ngModel)]="name" >
+            <label > </label>
+            <label for="inputEmail" class="sr-only">Описание</label>
+            <input type="description" id="inputDescription" class="form-control" placeholder="Описание" required autofocus name="description" [(ngModel)]="description" >
+            <label > </label>
+            <label for="scope" class="sr-only">Scope</label>
+            <input type="scope" id="inputScope" class="form-control" placeholder="Scope" required name="scope" [(ngModel)]="scope">
+            <label > </label>
+            <label for="inputPassword" class="sr-only">Redirect uri</label>
+            <input type="redirect_uri" id="inputRedirect_uri" class="form-control" placeholder="Redirect uri" required name="redirect_uri" [(ngModel)]="redirect_uri">
+            
+            <div class="checkbox mb-4">
+         
+              
+            </div>
+            <ng-template #content let-c="close" let-d="dismiss">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="modal-basic-title">Регистрация прошла успешно!</h4>
+                 
+                </div>
+                <div class="modal-body">
+                    <h4>Client id:</h4>
+                  <p><small>{{client}}</small></p>
+                  <h4>Client secret:</h4>
+                  <p><small>{{secret}}</small></p>
+         
+    
+                </div>
+                <div class="modal-footer">
+                   <button type="button" class="btn btn-primary center-block"  (click)="rotate();d('Cross click');">Авторизовать приложение</button>
+                </div>
+              </ng-template>
+              
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="registration(name,description,scope,redirect_uri,content);">Зарегистрировать</button>
+           
+            <p class="mt-5 mb-3 text-muted text-center">&copy; 2018-2019</p>
+          </form>
+    </div>
+
+
+</div>
+<div class="col-md-4"></div>
+</div>
+
+
+

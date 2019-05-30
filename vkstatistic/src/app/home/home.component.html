@@ -43,64 +43,90 @@
           <div class="row" >
 
               <div class="col-4">
-              
+                  <div *ngIf="condition2;else other_content2">
                   <p>
-                          <ngb-alert type="primary" [dismissible]="false"><strong>Количество друзей: </strong> {{response[0].friends}}</ngb-alert>
+                          <ngb-alert type="primary" [dismissible]="false"><strong>Количество друзей: </strong> {{response.friends}}</ngb-alert>
                         </p>
                         <p>
-                            <ngb-alert type="primary" [dismissible]="false"><strong>Количество подписчиков: </strong> {{response[0].followers}}</ngb-alert>
+                            <ngb-alert type="primary" [dismissible]="false"><strong>Количество подписчиков: </strong> {{response.followers}}</ngb-alert>
                           </p>
                           <p>
-                              <ngb-alert type="primary" [dismissible]="false"><strong>Количество подписок: </strong> {{response[0].subscriptions}}</ngb-alert>
+                              <ngb-alert type="primary" [dismissible]="false"><strong>Количество подписок: </strong> {{response.subscriptions}}</ngb-alert>
                             </p>
                           <p>
-                              <ngb-alert type="primary" [dismissible]="false"><strong>Количество друзей онлайн: </strong> {{response[0].online_friends}}</ngb-alert>
+                              <ngb-alert type="primary" [dismissible]="false"><strong>Количество друзей онлайн: </strong> {{response.online_friends}}</ngb-alert>
                             </p>
         
                   
 
                           <p>
-                              <ngb-alert type="primary" [dismissible]="false"><strong>Количество видеозаписей: </strong> {{response[0].videos }}</ngb-alert>
+                              <ngb-alert type="primary" [dismissible]="false"><strong>Количество видеозаписей: </strong> {{response.videos }}</ngb-alert>
                             </p>
                             <p>
-                                <ngb-alert type="primary" [dismissible]="false"><strong>Количество аудиозаписей: </strong> {{response[0].audios  }}</ngb-alert>
+                                <ngb-alert type="primary" [dismissible]="false"><strong>Количество аудиозаписей: </strong> {{response.audios  }}</ngb-alert>
                               </p>
                 
                               <p>
-                                  <ngb-alert type="primary" [dismissible]="false"><strong>Количество фотографий: </strong> {{response[0].photos  }}</ngb-alert>
+                                  <ngb-alert type="primary" [dismissible]="false"><strong>Количество фотографий: </strong> {{response.photos  }}</ngb-alert>
                                 </p>
                 
                                 <p>
-                                    <ngb-alert type="primary" [dismissible]="false"><strong>Количество заметок: </strong> {{response[0].notes  }}</ngb-alert>
+                                    <ngb-alert type="primary" [dismissible]="false"><strong>Количество заметок: </strong> {{response.notes  }}</ngb-alert>
                                   </p>
                                   <p>
-                                        <ngb-alert type="primary" [dismissible]="false"><strong>Количество сообществ: </strong> {{response[0].groups  }}</ngb-alert>
+                                        <ngb-alert type="primary" [dismissible]="false"><strong>Количество сообществ: </strong> {{response.groups  }}</ngb-alert>
                                       </p>
                                       <p>
-                                          <ngb-alert type="primary" [dismissible]="false"><strong>Количество подарков: </strong> {{response[0].gifts  }}</ngb-alert>
+                                          <ngb-alert type="primary" [dismissible]="false"><strong>Количество подарков: </strong> {{response.gifts  }}</ngb-alert>
                                         </p>
                                       <p>
-                                          <ngb-alert type="primary" [dismissible]="false"><strong>Количество «Интересные страницы»: </strong> {{response[0].pages  }}</ngb-alert>
+                                          <ngb-alert type="primary" [dismissible]="false"><strong>Количество «Интересные страницы»: </strong> {{response.pages  }}</ngb-alert>
                                         </p>
-                
+                                      </div> 
+                                      <ng-template #other_content2>
+                        
+                                          <p>
+                                              <ngb-alert type="primary" [dismissible]="false"><strong>Cтатистика на данный момент недоступна </strong> </ngb-alert>
+                                            </p>
+                                            <p>
+                                      </ng-template>   
                           
               </div>
 
             <div class="col-8">
+                <div *ngIf="condition2">
+                    <p>
                 <p>
                     <ngb-alert type="success" [dismissible]="false"><strong>Фото пользователя: </strong> </ngb-alert>
                   </p>
         
-               <img src="{{response[0].photoUrl}}" alt="thumbnail" class="img-thumbnail"
+               <img src="{{response.photoUrl}}" alt="thumbnail" class="img-thumbnail"
                 style="width: 300px"> 
              
                 <p>
-                    <ngb-alert type="success" [dismissible]="false"><strong>Имя: </strong> {{response[0].first_name}}</ngb-alert>
+                    <ngb-alert type="success" [dismissible]="false"><strong>Имя: </strong> {{response.first_name}}</ngb-alert>
                   </p>
                   <p>
-                      <ngb-alert type="success" [dismissible]="false"><strong>Фамилия: </strong> {{response[0].last_name}}</ngb-alert>
+                      <ngb-alert type="success" [dismissible]="false"><strong>Фамилия: </strong> {{response.last_name}}</ngb-alert>
                     </p>
+                  </div>
+                    <div *ngIf="condition;else other_content">
+                      
                     
+                    <p>
+                        <ngb-alert type="success" [dismissible]="false"><strong>В онлайн: </strong> {{response.online}}</ngb-alert>
+                      </p>
+                      <p>
+                          <ngb-alert type="success" [dismissible]="false"><strong>С мобильного: </strong> {{response.mobile}}</ngb-alert>
+                        </p>    
+                      </div>     
+                      <ng-template #other_content>
+                        
+                          <p>
+                              <ngb-alert type="success" [dismissible]="false"><strong>Онлайн статистика на данный момент недоступна </strong> </ngb-alert>
+                            </p>
+                            <p>
+                      </ng-template>           
             </div>
             
 

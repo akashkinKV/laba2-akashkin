@@ -18,6 +18,7 @@ import { StartComponent } from './start/start.component';
 import { StatisticComponent } from './statistic/statistic.component';
 import { StatonlineComponent } from './statonline/statonline.component';
 import { SettingComponent } from './setting/setting.component';
+import { RegAppComponent } from './reg-app/reg-app.component';
 
 
 const appRoutes:Routes=
@@ -30,6 +31,7 @@ const appRoutes:Routes=
 {path:'statistic',component:StatisticComponent},
 {path:'statonline',component:StatonlineComponent},
 {path:'setting',component:SettingComponent},
+{path:'regApp',component:RegAppComponent},
 ]
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ const appRoutes:Routes=
   StartComponent,
   StatisticComponent,
   StatonlineComponent,
-  SettingComponent
+  SettingComponent,
+  RegAppComponent
   ],
   imports: [
     HttpClientModule,
